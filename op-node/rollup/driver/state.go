@@ -281,19 +281,18 @@ func (s *Driver) eventLoop() {
 				CurrentL1:   l1Block,
 			})
 
+			s.Emitter.Emit(status.L1UnsafeEvent{L1Unsafe: newL1Head})
+			reqStep() // a new L1 head may mean we have the data to not get an EOF again.
+			
 			// Persist the safe-head ↔ L1 mapping so RPC optimism_safeHeadAtL1Block works even in EL-only sync mode
 			if s.SafeHeadNotifs != nil && s.SafeHeadNotifs.Enabled() {
-				if err := s.SafeHeadNotifs.SafeHeadUpdated(result.Safe, result.Safe.L1Origin.ID()); err != nil {
+				if err := s.SafeHeadNotifs.SafeHeadUpdated(result.Safe, result.Safe.L1Origin); err != nil {
 					// treat exactly like onSafeDerivedBlock
 					s.Emitter.Emit(rollup.ResetEvent{
 						Err: fmt.Errorf("safe head notifications failed: %w", err),
 					})
-					continue
 				}
 			}
-
-			s.Emitter.Emit(status.L1UnsafeEvent{L1Unsafe: newL1Head})
-			reqStep() // a new L1 head may mean we have the data to not get an EOF again.
 		case newL1Safe := <-s.l1SafeSig:
 			s.Emitter.Emit(status.L1SafeEvent{L1Safe: newL1Safe})
 			// no step, justified L1 information does not do anything for L2 derivation or status
