@@ -281,6 +281,13 @@ func (s *Driver) eventLoop() {
 				CurrentL1:   l1Block,
 			})
 
+			// Persist the safe-head ↔ L1 mapping so RPC optimism_safeHeadAtL1Block works even in EL-only sync mode
+			if s.SafeHeadNotifs != nil && s.SafeHeadNotifs.Enabled() {
+				if err := s.SafeHeadNotifs.SafeHeadUpdated(result.Safe, result.Safe.L1Origin.ID()); err != nil {
+					s.log.Warn("failed to record safe head in SafeDB", "err", err)
+				}
+			}
+
 			s.Emitter.Emit(status.L1UnsafeEvent{L1Unsafe: newL1Head})
 			reqStep() // a new L1 head may mean we have the data to not get an EOF again.
 		case newL1Safe := <-s.l1SafeSig:
