@@ -229,7 +229,7 @@ func BlockToSingularBatch(rollupCfg *rollup.Config, block *types.Block) (*Singul
 
 	opaqueTxs := make([]hexutil.Bytes, 0, len(block.Transactions()))
 	for i, tx := range block.Transactions() {
-		if tx.Type() == types.DepositTxType {
+		if tx.Type() == types.DepositTxType || tx.Type() == types.DepositTxV2Type {
 			continue
 		}
 		otx, err := tx.MarshalBinary()
@@ -240,7 +240,7 @@ func BlockToSingularBatch(rollupCfg *rollup.Config, block *types.Block) (*Singul
 	}
 
 	l1InfoTx := block.Transactions()[0]
-	if l1InfoTx.Type() != types.DepositTxType {
+	if l1InfoTx.Type() != types.DepositTxType && l1InfoTx.Type() != types.DepositTxV2Type {
 		return nil, nil, ErrNotDepositTx
 	}
 	l1Info, err := L1BlockInfoFromBytes(rollupCfg, block.Time(), l1InfoTx.Data())
