@@ -202,7 +202,8 @@ func (info *L1BlockInfo) marshalBinaryEcotone() ([]byte, error) {
 }
 
 func (info *L1BlockInfo) unmarshalBinaryEcotone(data []byte) error {
-	if len(data) != L1InfoEcotoneLen {
+	// Support both old (196 bytes) and new (292 bytes) Ecotone formats
+	if len(data) != 196 && len(data) != L1InfoEcotoneLen {
 		return fmt.Errorf("data is unexpected length: %d", len(data))
 	}
 	r := bytes.NewReader(data)
@@ -240,7 +241,11 @@ func (info *L1BlockInfo) unmarshalBinaryEcotone(data []byte) error {
 		return err
 	}
 	remainingBytes := r.Len()
-	if remainingBytes != 128 {
+	// For 196-byte format, expect 32 remaining bytes
+	// For 292-byte format, expect 128 remaining bytes
+	if len(data) == 196 && remainingBytes != 32 {
+		return fmt.Errorf("unexpected number of remaining bytes: %d, expected: 32", remainingBytes)
+	} else if len(data) == L1InfoEcotoneLen && remainingBytes != 128 {
 		return fmt.Errorf("unexpected number of remaining bytes: %d, expected: 128", remainingBytes)
 	}
 	return nil
