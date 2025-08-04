@@ -61,6 +61,12 @@ fi
 # Set log level if not already set
 export OP_NODE_LOG_LEVEL=${OP_NODE_LOG_LEVEL:-"info"}
 
+# Build the command with optional safedb flag
+SAFEDB_FLAG=""
+if [ -n "$SAFEDB_PATH" ]; then
+  SAFEDB_FLAG="--safedb.path=$SAFEDB_PATH"
+fi
+
 $OP_NODE_BIN \
   --l1.beacon.ignore=true \
   --rpc.addr=0.0.0.0 \
@@ -74,5 +80,5 @@ $OP_NODE_BIN \
   --syncmode execution-layer \
   --l2 $OP_NODE_L2_ENGINE_RPC \
   --l1 $OP_NODE_L1_ETH_RPC \
-  --safedb.path=${SAFEDB_PATH:-./safedb} \
+  $SAFEDB_FLAG \
   --log.level=$OP_NODE_LOG_LEVEL $ADDITIONAL_FLAGS
