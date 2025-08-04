@@ -36,7 +36,7 @@ func (eq *EngDeriver) onBuildInvalid(ev BuildInvalidEvent) {
 	// Count the number of deposits to see if the tx list is deposit only.
 	depositCount := 0
 	for _, tx := range ev.Attributes.Attributes.Transactions {
-		if len(tx) > 0 && tx[0] == types.DepositTxType {
+		if len(tx) > 0 && (tx[0] == types.DepositTxType || tx[0] == types.DepositTxV2Type) {
 			depositCount += 1
 		}
 	}

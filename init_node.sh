@@ -58,6 +58,9 @@ if [ ! -f "$OP_NODE_BIN" ]; then
     exit 1
 fi
 
+# Set log level if not already set
+export OP_NODE_LOG_LEVEL=${OP_NODE_LOG_LEVEL:-"info"}
+
 $OP_NODE_BIN \
   --l1.beacon.ignore=true \
   --rpc.addr=0.0.0.0 \
@@ -71,4 +74,5 @@ $OP_NODE_BIN \
   --syncmode execution-layer \
   --l2 $OP_NODE_L2_ENGINE_RPC \
   --l1 $OP_NODE_L1_ETH_RPC \
-  $ADDITIONAL_FLAGS
+  --safedb.path=${SAFEDB_PATH:-./safedb} \
+  --log.level=$OP_NODE_LOG_LEVEL $ADDITIONAL_FLAGS

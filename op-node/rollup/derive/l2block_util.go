@@ -43,7 +43,7 @@ func L2BlockToBlockRef(rollupCfg *rollup.Config, block L2BlockRefSource) (eth.L2
 			return eth.L2BlockRef{}, fmt.Errorf("l2 block is missing L1 info deposit tx, block hash: %s", hash)
 		}
 		tx := txs[0]
-		if tx.Type() != types.DepositTxType {
+		if tx.Type() != types.DepositTxType && tx.Type() != types.DepositTxV2Type {
 			return eth.L2BlockRef{}, fmt.Errorf("first payload tx has unexpected tx type: %d", tx.Type())
 		}
 		info, err := L1BlockInfoFromBytes(rollupCfg, block.Time(), tx.Data())

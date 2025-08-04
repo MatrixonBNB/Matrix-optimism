@@ -111,6 +111,10 @@ func (st *StatusTracker) OnEvent(ev event.Event) bool {
 		st.data.PendingSafeL2 = x.SafeL2
 		st.data.FinalizedL2 = x.FinalizedL2
 		st.data.CurrentL1 = x.CurrentL1
+		// Pre-interop: every unsafe L2 block is also cross-unsafe
+		st.data.CrossUnsafeL2 = x.UnsafeL2
+		// Pre-interop: local-safe L2 matches safe L2
+		st.data.LocalSafeL2 = x.SafeL2
 		st.log.Info("SetL2BlocksEvent", "unsafe", x.UnsafeL2, "safe", x.SafeL2, "finalized", x.FinalizedL2, "CurrentL1", x.CurrentL1)
 	default: // other events do not affect the sync status
 		return false

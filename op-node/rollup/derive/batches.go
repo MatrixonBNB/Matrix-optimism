@@ -157,7 +157,7 @@ func checkSingularBatch(cfg *rollup.Config, log log.Logger, l1Blocks []eth.L1Blo
 			log.Warn("transaction data must not be empty, but found empty tx", "tx_index", i)
 			return BatchDrop
 		}
-		if txBytes[0] == types.DepositTxType {
+		if txBytes[0] == types.DepositTxType || txBytes[0] == types.DepositTxV2Type {
 			log.Warn("sequencers may not embed any deposits into batch data, but found tx that has one", "tx_index", i)
 			return BatchDrop
 		}
@@ -327,7 +327,7 @@ func checkSpanBatch(ctx context.Context, cfg *rollup.Config, log log.Logger, l1B
 				log.Warn("transaction data must not be empty, but found empty tx", "tx_index", i)
 				return BatchDrop
 			}
-			if txBytes[0] == types.DepositTxType {
+			if txBytes[0] == types.DepositTxType || txBytes[0] == types.DepositTxV2Type {
 				log.Warn("sequencers may not embed any deposits into batch data, but found tx that has one", "tx_index", i)
 				return BatchDrop
 			}
@@ -349,7 +349,7 @@ func checkSpanBatch(ctx context.Context, cfg *rollup.Config, log log.Logger, l1B
 			// execution payload has deposit TXs, but batch does not.
 			depositCount := 0
 			for _, tx := range safeBlockTxs {
-				if tx[0] == types.DepositTxType {
+				if tx[0] == types.DepositTxType || tx[0] == types.DepositTxV2Type {
 					depositCount++
 				}
 			}

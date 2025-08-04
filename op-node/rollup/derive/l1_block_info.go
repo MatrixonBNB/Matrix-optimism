@@ -22,7 +22,7 @@ const (
 	L1InfoFuncEcotoneSignature = "setL1BlockValuesEcotone()"
 	L1InfoArguments            = 8
 	L1InfoBedrockLen           = 4 + 32*L1InfoArguments
-	L1InfoEcotoneLen           = 4 + 32*5 + 32 // after Ecotone upgrade, args are packed into 5 32-byte slots (plus the FCT slots)
+	L1InfoEcotoneLen           = 292 // Bluebird
 )
 
 var (
@@ -240,8 +240,8 @@ func (info *L1BlockInfo) unmarshalBinaryEcotone(data []byte) error {
 		return err
 	}
 	remainingBytes := r.Len()
-	if remainingBytes != 32 {
-		return fmt.Errorf("unexpected number of remaining bytes: %d, expected: 32", remainingBytes)
+	if remainingBytes != 128 {
+		return fmt.Errorf("unexpected number of remaining bytes: %d, expected: 128", remainingBytes)
 	}
 	return nil
 }
