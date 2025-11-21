@@ -1,6 +1,6 @@
 module github.com/ethereum-optimism/optimism
 
-go 1.21
+go 1.22
 
 require (
 	github.com/BurntSushi/toml v1.4.0
@@ -34,7 +34,7 @@ require (
 	github.com/minio/minio-go/v7 v7.0.76
 	github.com/multiformats/go-base32 v0.1.0
 	github.com/multiformats/go-multiaddr v0.13.0
-	github.com/multiformats/go-multiaddr-dns v0.3.1
+	github.com/multiformats/go-multiaddr-dns v0.4.1
 	github.com/olekukonko/tablewriter v0.0.5
 	github.com/onsi/gomega v1.34.1
 	github.com/pkg/errors v0.9.1
