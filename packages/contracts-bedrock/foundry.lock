@@ -1,0 +1,44 @@
+{
+  "lib/automate": {
+    "rev": "0117585fea20ff0cd24fd17bf74a6debaa4d57d2"
+  },
+  "lib/facet-sol": {
+    "branch": {
+      "name": "v1.0.0",
+      "rev": "fdc7891a032aa120487563a0233809bbe2c6ce98"
+    }
+  },
+  "lib/forge-std": {
+    "rev": "2d8b7b876a5b328d6a73e13c4740ed7a0d72d5f4"
+  },
+  "lib/kontrol-cheatcodes": {
+    "rev": "2c48ae1ab44228c199dca29414c0b4b18a3434e6"
+  },
+  "lib/lib-keccak": {
+    "rev": "0115edbbc60b5f702392caafc3a142061e6142fa"
+  },
+  "lib/openzeppelin-contracts": {
+    "rev": "ecd2ca2cd7cac116f7a37d0e474bbb3d7d5e1c4d"
+  },
+  "lib/openzeppelin-contracts-upgradeable": {
+    "rev": "0a2cb9a445c365870ed7a8ab461b12acf3e27d63"
+  },
+  "lib/openzeppelin-contracts-v5": {
+    "rev": "dbb6104ce834628e473d2173bbc9d47f81a9eec3"
+  },
+  "lib/safe-contracts": {
+    "branch": {
+      "name": "v1.4.0",
+      "rev": "186a21a74b327f17fc41217a927dea7064f74604"
+    }
+  },
+  "lib/solady": {
+    "rev": "502cc1ea718e6fa73b380635ee0868b0740595f0"
+  },
+  "lib/solady-latest": {
+    "rev": "4676345386dab5728e2da9a6540f6cd308a9f4d5"
+  },
+  "lib/solmate": {
+    "rev": "8f9b23f8838670afda0fd8983f2c41e8037ae6bc"
+  }
+}

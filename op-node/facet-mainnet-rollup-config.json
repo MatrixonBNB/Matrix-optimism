@@ -16,12 +16,12 @@
       "gasLimit": 200000000
     }
   },
-  "block_time": 12,
+  "block_time": 1,
   "max_sequencer_drift": 1,
   "seq_window_size": 2,
   "channel_timeout": 300,
-  "l1_chain_id": 1,
-  "l2_chain_id": 1027303,
+  "l1_chain_id": 56,
+  "l2_chain_id": 768945,
   "regolith_time": 0,
   "canyon_time": 0,
   "ecotone_time": 0,
