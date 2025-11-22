@@ -14,9 +14,9 @@
   "sequencerWindowSize": 3600,
   "channelTimeout": 300,
 
-  "p2pSequencerAddress": "0x0000000000000000000000000000000000000000",
-  "batchInboxAddress": "0x0000000000000000000000000000000000000000",
-  "batchSenderAddress": "0x0000000000000000000000000000000000000000",
+  "p2pSequencerAddress": "0x0000000000000000000000000000000000000001",
+  "batchInboxAddress": "0x0000000000000000000000000000000000000001",
+  "batchSenderAddress": "0x0000000000000000000000000000000000000001",
 
   "l2OutputOracleSubmissionInterval": 30,
   "l2OutputOracleStartingBlockNumber": 0,
