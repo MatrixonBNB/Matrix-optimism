@@ -1,0 +1,78 @@
+{
+
+  "l1StartingBlockTag": "0xa81fd76053cc382b7c5a380a0b8751dc7090fa2ebd149d180dc51d09f7a756ba",
+  
+  "l1ChainID": 97,
+  "l2ChainID": 768946,
+  "l2BlockTime": 1,
+  "l1BlockTime": 1,
+  
+  "l2OutputOracleProposer": "0x45bd649b96b043e5c89c026d6a1bd3964c770988",
+  "l2OutputOracleChallenger": "0x45bd649b96b043e5c89c026d6a1bd3964c770988",
+  
+  "maxSequencerDrift": 600,
+  "sequencerWindowSize": 3600,
+  "channelTimeout": 300,
+
+  "p2pSequencerAddress": "0x0000000000000000000000000000000000000000",
+  "batchInboxAddress": "0x0000000000000000000000000000000000000000",
+  "batchSenderAddress": "0x0000000000000000000000000000000000000000",
+
+  "l2OutputOracleSubmissionInterval": 30,
+  "l2OutputOracleStartingBlockNumber": 0,
+  "l2OutputOracleStartingTimestamp": 1763843610,
+
+  "finalizationPeriodSeconds": 12,
+
+  "proxyAdminOwner": "0x295fC51fAA558941451D0cc22f1355a0F4226C1E",
+  "baseFeeVaultRecipient": "0x295fC51fAA558941451D0cc22f1355a0F4226C1E",
+  "l1FeeVaultRecipient": "0x295fC51fAA558941451D0cc22f1355a0F4226C1E",
+  "sequencerFeeVaultRecipient": "0x295fC51fAA558941451D0cc22f1355a0F4226C1E",
+  "finalSystemOwner": "0x295fC51fAA558941451D0cc22f1355a0F4226C1E",
+  "superchainConfigGuardian": "0x295fC51fAA558941451D0cc22f1355a0F4226C1E",
+
+  "baseFeeVaultMinimumWithdrawalAmount": "0x8ac7230489e80000",
+  "l1FeeVaultMinimumWithdrawalAmount": "0x8ac7230489e80000",
+  "sequencerFeeVaultMinimumWithdrawalAmount": "0x8ac7230489e80000",
+  "baseFeeVaultWithdrawalNetwork": 0,
+  "l1FeeVaultWithdrawalNetwork": 0,
+  "sequencerFeeVaultWithdrawalNetwork": 0,
+
+  "gasPriceOracleOverhead": 0,
+  "gasPriceOracleScalar": 1000000,
+
+  "enableGovernance": false,
+  "governanceTokenSymbol": "OP",
+  "governanceTokenName": "Optimism",
+  "governanceTokenOwner": "0x295fC51fAA558941451D0cc22f1355a0F4226C1E",
+
+  "l2GenesisBlockGasLimit": "0xbebc200",
+  "l2GenesisBlockBaseFeePerGas": "0x3b9aca00",
+
+  "eip1559Denominator": 8,
+  "eip1559DenominatorCanyon": 8,
+  "eip1559Elasticity": 2,
+  "l2GenesisFjordTimeOffset": "0x0",
+  "l2GenesisRegolithTimeOffset": "0x0",
+  "l2GenesisEcotoneTimeOffset": "0x0",
+  "l2GenesisDeltaTimeOffset": "0x0",
+  "l2GenesisCanyonTimeOffset": "0x0",
+  "systemConfigStartBlock": 0,
+
+  "requiredProtocolVersion": "0x0000000000000000000000000000000000000000000000000000000000000000",
+  "recommendedProtocolVersion": "0x0000000000000000000000000000000000000000000000000000000000000000",
+
+  "faultGameAbsolutePrestate": "0x0000000000000000000000000000000000000000000000000000000000000000",
+  "faultGameMaxDepth": 44,
+  "faultGameClockExtension": 0,
+  "faultGameMaxClockDuration": 1200,
+  "faultGameGenesisBlock": 0,
+  "faultGameGenesisOutputRoot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+  "faultGameSplitDepth": 14,
+  "faultGameWithdrawalDelay": 600,
+
+  "preimageOracleMinProposalSize": 1800000,
+  "preimageOracleChallengePeriod": 300,
+
+  "useFaultProofs": false
+}
