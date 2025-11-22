@@ -1,14 +1,14 @@
 {
 
-  "l1StartingBlockTag": "0xbc0f0148055c60a8fa643a8ca7535a6eab59cf42767681ec3932998805ec813e",
+  "l1StartingBlockTag": "0xa81fd76053cc382b7c5a380a0b8751dc7090fa2ebd149d180dc51d09f7a756ba",
   
-  "l1ChainID": 11155111,
-  "l2ChainID": 16436858,
-  "l2BlockTime": 12,
-  "l1BlockTime": 12,
+  "l1ChainID": 97,
+  "l2ChainID": 768946,
+  "l2BlockTime": 1,
+  "l1BlockTime": 1,
   
-  "l2OutputOracleProposer": "0x4bBaF281d2700Cf8bc6dF61d9fBe6c7a021D03aC",
-  "l2OutputOracleChallenger": "0x4bBaF281d2700Cf8bc6dF61d9fBe6c7a021D03aC",
+  "l2OutputOracleProposer": "0x45bd649b96b043e5c89c026d6a1bd3964c770988",
+  "l2OutputOracleChallenger": "0x45bd649b96b043e5c89c026d6a1bd3964c770988",
   
   "maxSequencerDrift": 600,
   "sequencerWindowSize": 3600,
@@ -19,17 +19,17 @@
   "batchSenderAddress": "0x0000000000000000000000000000000000000000",
 
   "l2OutputOracleSubmissionInterval": 30,
-  "l2OutputOracleStartingBlockNumber": 2776,
-  "l2OutputOracleStartingTimestamp": 1733241408,
+  "l2OutputOracleStartingBlockNumber": 0,
+  "l2OutputOracleStartingTimestamp": 1763843610,
 
   "finalizationPeriodSeconds": 12,
 
-  "proxyAdminOwner": "0xb2B01DeCb6cd36E7396b78D3744482627F22C525",
-  "baseFeeVaultRecipient": "0xb2B01DeCb6cd36E7396b78D3744482627F22C525",
-  "l1FeeVaultRecipient": "0xb2B01DeCb6cd36E7396b78D3744482627F22C525",
-  "sequencerFeeVaultRecipient": "0xb2B01DeCb6cd36E7396b78D3744482627F22C525",
-  "finalSystemOwner": "0xb2B01DeCb6cd36E7396b78D3744482627F22C525",
-  "superchainConfigGuardian": "0xb2B01DeCb6cd36E7396b78D3744482627F22C525",
+  "proxyAdminOwner": "0x295fC51fAA558941451D0cc22f1355a0F4226C1E",
+  "baseFeeVaultRecipient": "0x295fC51fAA558941451D0cc22f1355a0F4226C1E",
+  "l1FeeVaultRecipient": "0x295fC51fAA558941451D0cc22f1355a0F4226C1E",
+  "sequencerFeeVaultRecipient": "0x295fC51fAA558941451D0cc22f1355a0F4226C1E",
+  "finalSystemOwner": "0x295fC51fAA558941451D0cc22f1355a0F4226C1E",
+  "superchainConfigGuardian": "0x295fC51fAA558941451D0cc22f1355a0F4226C1E",
 
   "baseFeeVaultMinimumWithdrawalAmount": "0x8ac7230489e80000",
   "l1FeeVaultMinimumWithdrawalAmount": "0x8ac7230489e80000",

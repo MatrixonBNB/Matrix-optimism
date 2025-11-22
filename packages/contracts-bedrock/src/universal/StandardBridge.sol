@@ -531,7 +531,7 @@ abstract contract StandardBridge is Initializable {
         bool _performSafeTransferFrom,
         bool _allowMsgValue
     )
-        internal
+        internal virtual
     {
         require(msg.value == 0 || _allowMsgValue, "StandardBridge: cannot send value");
 
