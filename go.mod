@@ -10,7 +10,7 @@ require (
 	github.com/cockroachdb/pebble v1.1.2
 	github.com/consensys/gnark-crypto v0.12.1
 	github.com/crate-crypto/go-kzg-4844 v1.0.0
-	github.com/decred/dcrd/dcrec/secp256k1/v4 v4.3.0
+	github.com/decred/dcrd/dcrec/secp256k1/v4 v4.4.1
 	github.com/ethereum-optimism/go-ethereum-hdwallet v0.1.3
 	github.com/ethereum-optimism/superchain-registry/superchain v0.0.0-20240828144951-4e6edcb7d36c
 	github.com/ethereum/go-ethereum v1.14.8
@@ -77,7 +77,7 @@ require (
 	github.com/davecgh/go-spew v1.1.2-0.20180830191138-d8f796af33cc // indirect
 	github.com/davidlazar/go-crypto v0.0.0-20200604182044-b73af7476f6c // indirect
 	github.com/deckarep/golang-set/v2 v2.6.0 // indirect
-	github.com/decred/dcrd/crypto/blake256 v1.0.1 // indirect
+	github.com/decred/dcrd/crypto/blake256 v1.1.0 // indirect
 	github.com/deepmap/oapi-codegen v1.8.2 // indirect
 	github.com/dgraph-io/ristretto v0.0.3-0.20200630154024-f66de99634de // indirect
 	github.com/dlclark/regexp2 v1.7.0 // indirect
