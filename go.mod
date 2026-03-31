@@ -1,10 +1,10 @@
 module github.com/ethereum-optimism/optimism
 
-go 1.21
+go 1.22
 
 require (
 	github.com/BurntSushi/toml v1.4.0
-	github.com/andybalholm/brotli v1.1.0
+	github.com/andybalholm/brotli v1.2.1
 	github.com/btcsuite/btcd v0.24.2
 	github.com/btcsuite/btcd/chaincfg/chainhash v1.1.0
 	github.com/cockroachdb/pebble v1.1.2
