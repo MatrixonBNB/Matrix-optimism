@@ -40,7 +40,7 @@ require (
 	github.com/pkg/errors v0.9.1
 	github.com/pkg/profile v1.7.0
 	github.com/prometheus/client_golang v1.20.2
-	github.com/protolambda/ctxlock v0.1.0
+	github.com/protolambda/ctxlock v0.2.0
 	github.com/stretchr/testify v1.9.0
 	github.com/urfave/cli/v2 v2.27.4
 	golang.org/x/crypto v0.26.0
